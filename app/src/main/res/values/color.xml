@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mic_btn_default">#01777777</color>
+    <color name="mic_btn_press">#ff777777</color>
+    <color name="translate_btn_default">#fff6ca06</color>
+    <color name="translate_btn_press">#fff6aa16</color>
+    <color name="speak_btn_default">#fff6ca06</color>
+    <color name="speak_btn_press">#fff8aa16</color>
+    <color name="change_btn_default">#ff333333</color>
+    <color name="change_btn_press">#ff222222</color>
+</resources>
