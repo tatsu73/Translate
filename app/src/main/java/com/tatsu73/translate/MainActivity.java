@@ -106,19 +106,24 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
 
         et2 = (EditText)findViewById(R.id.editText2);
-        et2.setOnKeyListener(new View.OnKeyListener() {
+        et2.addTextChangedListener(new TextWatcher() {
             @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if((event.getAction() == KeyEvent.ACTION_DOWN) && ((keyCode == KeyEvent.KEYCODE_ENTER)||(keyCode == KeyEvent.KEYCODE_BACK))){
-                    if(et2.getText().toString().isEmpty()){
-                        deleteButton();
-                    }
-                    else if(!btnFlg) {
-                        createButton();
-                        return  true;
-                    }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(et2.getText().toString().isEmpty()){
+                    deleteButton();
+                } else if(!btnFlg){
+                    createButton();
                 }
-                return false;
             }
         });
     }
